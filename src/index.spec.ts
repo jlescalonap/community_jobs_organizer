@@ -1,4 +1,4 @@
-import Person from "."
+import Person from "@/index"
 
 it("should return Felipe", () => {
   const person = new Person()
