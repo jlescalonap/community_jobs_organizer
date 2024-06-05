@@ -1,6 +1,7 @@
-const message = "hello world"
+class Person {
+  sayMyName() {
+    return "Felipe"
+  }
+}
 
-console.log(message)
-
-// https://www.youtube.com/watch?v=RO3l_xy7GeM&t=278s
-// 17:01
+export default Person
