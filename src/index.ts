@@ -1,9 +1,10 @@
-class Person {
-  sayMyName() {
-    return "Felipe"
-  }
-}
+import * as express from "express"
+import { Request, Response } from "express"
 
-export default Person
+const app = express()
 
-// https://www.youtube.com/watch?v=RO3l_xy7GeM&t=1021s || 23:37
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hello World!")
+})
+
+app.listen(3000, () => console.log("Listening on port 3000"))
