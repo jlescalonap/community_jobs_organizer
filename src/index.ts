@@ -1,23 +1,30 @@
-import * as express from "express"
-import { Request, Response } from "express"
- 
-import { Routes } from "./api/routes";
-import * as dotenv from 'dotenv';
+// index.ts
 
-dotenv.config();
-const app = express();
-const rutes = new Routes();
+// Start
+import { start } from './app';
 
-app.use(express.text());
-app.use(express.json());
- 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!")
-})
-app.use(rutes.getRouter());
+// MongoDB
+import { connectMongoDB } from './database';
+
+// Configs
+import { PORT } from './configs/global';
 
 
+const main = async () => {
+    try {
+        // start server
+        const httpServer = await start();
 
-app.listen(process.env.PORT);
+        httpServer.listen(PORT, () => {
+            console.log(`Corriendo en el puerto http://localhost:${PORT}`);
+        });
 
-console.log(` Corriendo en el puerto  http://localhost:${process.env.PORT}`);
+        // conntect db
+        connectMongoDB();
+
+    } catch (err) {
+        console.error('Error al iniciar el servidor:', err);
+    }
+};
+
+main();
