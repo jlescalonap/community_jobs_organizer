@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { WelcomeImplement } from './welcome.implement';
+import { WelcomeImplement } from '../implements/welcome.implement';
 
 //importar conexion
 /**
