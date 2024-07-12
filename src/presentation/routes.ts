@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { WelcomeController } from './Controllers/WelcomeController';
+import { WelcomeController } from './welcome/welcome.controller';
 
 export class Routes {
   private router = Router();

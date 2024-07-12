@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { WelcomeImplement } from '../Implements/WelcomeImplement';
+import { WelcomeImplement } from './welcome.implement';
 //importar conexion
 /**
  *En el controlador se va a validar la data y los errores 
