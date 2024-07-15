@@ -14,7 +14,7 @@ export async function start() {
   // Test de eventos
   jobsEvents.onNotifyOnDiscord({
     content: 'Prueba de sonido!',
-    channel: 'Discord!',
+    channel: 'jobs',
   });
   // express
   const app = express();
