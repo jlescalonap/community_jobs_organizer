@@ -4,12 +4,15 @@
 import { Router } from "express";
 
 // Controllers
-import { login, register } from "../controllers/auth.controller";
+import { register, login, logout } from "../controllers/auth.controller";
 
 
 const router = Router();
 
-router.post("/api/login", login);
 router.post("/api/register", register);
+
+router.post("/api/login", login);
+
+router.post("/api/logout", logout);
 
 export default router;

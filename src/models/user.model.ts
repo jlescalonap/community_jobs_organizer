@@ -1,10 +1,10 @@
 // user.mode.ts
 
 // Modules
-import mongoose, { ObjectId } from 'mongoose';
-import { Users } from '../types/users';
+import mongoose, { ObjectId, Schema } from 'mongoose';
 
-const Schema = mongoose.Schema;
+// Types
+import { Users } from '../types/users.type';
 
 export interface UserSchema extends Omit<Users.User, 'id'>, Document {
   _id: ObjectId;

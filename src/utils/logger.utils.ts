@@ -1,3 +1,5 @@
+// logger.ts
+
 class LoggerUtil {
   debug(content: string, notify: boolean = false) {
     console.log(content);
@@ -11,6 +13,7 @@ class LoggerUtil {
 }
 
 const Logger = new LoggerUtil();
+
 const Critical = (message: string) => Logger.critical(message);
 
 export { Critical, Logger };
