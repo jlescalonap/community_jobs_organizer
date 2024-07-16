@@ -6,7 +6,7 @@ import express from "express";
 import morgan from "morgan";
 
 // Routes
-import authRoutes from "../src/routes/auth.routes"
+import authRoutes from "./routes/auth.routes"
 
 
 // start server

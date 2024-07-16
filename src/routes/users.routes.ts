@@ -1,3 +1,6 @@
+// users.routes.ts
+
+// Modules
 import { Router } from 'express';
 
 const router = Router();
@@ -5,6 +8,7 @@ const router = Router();
 /**
  * For admin use cases
  */
+
 router.route('/users').get();
 
 router.route('/users/:id/data').get();

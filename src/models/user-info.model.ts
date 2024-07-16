@@ -1,7 +1,14 @@
+// user-info.models.ts
+
+// Modules
 import { model, Schema, Document } from 'mongoose';
 import { ObjectId } from 'mongodb';
+
+// Models
 import { UserSchema } from './user.model';
-import { Users } from '../types/users';
+
+// Types
+import { Users } from '../types/users.type';
 
 export interface UserInfoSchema
   extends Omit<Users.Info, 'id' | 'user'>,
